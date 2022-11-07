@@ -17,12 +17,14 @@ export const formatDateLabel = (timestamp) => {
 export const renderChart = (readings) => {
   chartJs.Chart.defaults.font.size = "10px";
 
+  // 1.apply()方法
   chartJs.Chart.register.apply(
     null,
     Object.values(chartJs).filter((chartClass) => chartClass.id)
   );
 
   const labels = readings.map(({ time }) => formatDateLabel(time));
+  // labels: 横轴
   const values = readings.map(({ value }) => value);
 
   const data = {
