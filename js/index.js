@@ -2,7 +2,9 @@ import { renderChart } from "./chart.js";
 import { getReadings, groupByDay, sortByTime } from "./reading";
 
 const readings = await getReadings();
-renderChart(sortByTime(groupByDay(readings)).slice(-30));
+const data = sortByTime(groupByDay(readings)).slice(-30);
+
+renderChart(data);
 
 // calculate values -> power-consumption(substitute 895)
 const getConsumption = (readings) =>{
@@ -10,6 +12,6 @@ const getConsumption = (readings) =>{
     return Math.round(values.reduce((x, y) => x + y));
 }
 
-const result = getConsumption(sortByTime(groupByDay(readings)).slice(-30));
+const powerConsumption = getConsumption(data);
 
-document.getElementById("getConsumption").innerHTML = result;
+document.getElementById("powerConsumption").innerHTML = powerConsumption.toString();
