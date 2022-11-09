@@ -2,7 +2,7 @@ export const getConsumption = (readings) => {
   const values = readings.map(({ value }) => value);
   const powerConsumption = Math.round(values.reduce((x, y) => x + y));
   const cost = Math.round(powerConsumption * 0.138);
-  const footprint = (powerConsumption * 0.0002532).toFixed(4);
+  const footprint = Number((powerConsumption * 0.0002532).toFixed(4));
 
   return [cost, powerConsumption, footprint];
 };
