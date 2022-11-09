@@ -103,7 +103,7 @@ html {
   border: 1px solid rgb(225, 225, 225);
 }
 
-.power-consumption {
+.regularBox {
   background-color: rgb(245, 245, 245);
   padding: 0.5rem 1rem;
   width: 385px;
