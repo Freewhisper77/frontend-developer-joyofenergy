@@ -47,7 +47,7 @@ describe("#box", function () {
         },
       ];
       const powerConsumption = getConsumption(readings);
-      expect(powerConsumption[2]).toEqual(0.0316);
+      expect(powerConsumption[2]).toEqual("0.0316");
     });
   });
 });
