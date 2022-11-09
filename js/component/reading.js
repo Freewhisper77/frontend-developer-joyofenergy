@@ -19,7 +19,6 @@ export const groupByDay = (readings) => {
     curr[day] += value;
     return curr;
   }, {});
-
   return Object.entries(groupedByDay).map(([day, value]) => ({
     time: Number(day),
     value,

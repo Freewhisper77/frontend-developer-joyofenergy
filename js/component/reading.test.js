@@ -11,7 +11,9 @@ describe("#reading", function () {
       const reading = (await getReadings(1))[0];
 
       expect(typeof reading.time).toBe("number");
+      expect(reading.time.toString().length).toEqual(13);
       expect(typeof reading.value).toBe("number");
+      expect(0.4 <= reading.value < 1.1).toBe(true);
     });
 
     it("should generate readings by hours and ordered by time descending", async () => {
@@ -40,7 +42,7 @@ describe("#reading", function () {
       ];
 
       const groupedReadings = groupByDay(readings);
-      expect(groupedReadings).toHaveLength(2);
+      expect(groupedReadings).toHaveLength(2); //
       expect(typeof groupedReadings[0].time).toBe("number");
       expect(typeof groupedReadings[0].value).toBe("number");
     });
@@ -64,6 +66,7 @@ describe("#reading", function () {
 
       const groupedReadings = groupByDay(readings);
       expect(groupedReadings).toHaveLength(3);
+      // 相同day的不同hours&minutes的values加起来 => 这一天的耗电量
       expect(
         groupedReadings.find(
           (reading) => reading.time === new Date(2021, 12, 17).getTime()
