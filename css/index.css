@@ -102,29 +102,3 @@ html {
 .border-grey {
   border: 1px solid rgb(225, 225, 225);
 }
-
-.power-consumption {
-  background-color: rgb(245, 245, 245);
-  padding: 0.5rem 1rem;
-  width: 385px;
-  height: 60px;
-  margin-top: 0.5rem;
-}
-
-.title {
-  font-size: 0.875rem;
-  color: rgb(109, 109, 109);
-  font-weight: bold;
-  margin-bottom: 0.2rem;
-}
-
-.metric {
-  font-size: 1.25rem;
-  color: rgb(109, 109, 109);
-  margin-bottom: 0.2rem;
-}
-
-.unit {
-  font-size: 0.875rem;
-  color: rgb(109, 109, 109);
-}
