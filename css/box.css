@@ -1,9 +1,19 @@
+.box {
+    display: flex;
+}
+
 .regularBox {
     background-color: rgb(245, 245, 245);
     padding: 0.5rem 1rem;
-    width: 385px;
+    width: 600px;
     height: 60px;
     margin-top: 0.5rem;
+    overflow: clip;
+}
+
+.middleBox {
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 .title {
