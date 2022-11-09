@@ -6,7 +6,7 @@
     "test": "jest",
     "test-watch": "jest --watchAll",
     "start": "snowpack dev",
-    "format": "prettier -w ./*.js"
+    "format": "prettier -w js"
   },
   "contributors": [
     "Anish George",
