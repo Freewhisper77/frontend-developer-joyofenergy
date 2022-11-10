@@ -1,4 +1,4 @@
-import { getConsumption } from "./box";
+import { getCost, getFootPrint, getPowerConsumption } from "./box";
 
 describe("#box", function () {
   describe("#getConsumption", () => {
@@ -14,8 +14,8 @@ describe("#box", function () {
           value: 35,
         },
       ];
-      const powerConsumption = getConsumption(readings);
-      expect(powerConsumption[1]).toEqual(125);
+      const powerConsumption = getPowerConsumption(readings);
+      expect(powerConsumption).toEqual(125);
     });
 
     it("should calculate cost and round to the nearest integer", () => {
@@ -30,8 +30,8 @@ describe("#box", function () {
           value: 35,
         },
       ];
-      const powerConsumption = getConsumption(readings);
-      expect(powerConsumption[0]).toEqual(17);
+      const cost = getCost(readings);
+      expect(cost).toEqual(17);
     });
 
     it("should calculate footprint and get 4 digits after the decimal point", () => {
@@ -46,8 +46,8 @@ describe("#box", function () {
           value: 35,
         },
       ];
-      const powerConsumption = getConsumption(readings);
-      expect(powerConsumption[2]).toEqual("0.0316");
+      const footprint = getFootPrint(readings);
+      expect(footprint).toEqual("0.0316");
     });
   });
 });
