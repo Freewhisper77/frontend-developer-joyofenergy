@@ -1,14 +1,18 @@
+.box {
+    justify-content: space-between;
+}
+
 .regularBox {
     background-color: rgb(245, 245, 245);
     padding: 0.5rem 1rem;
-    width: 600px;
+    width: 28%;
     height: 60px;
     margin-top: 0.5rem;
 }
 
 .middleBox {
-    margin-left: 2rem;
     margin-right: 2rem;
+    margin-left: 2rem;
 }
 
 .title {
@@ -16,6 +20,7 @@
     color: rgb(109, 109, 109);
     font-weight: bold;
     margin-bottom: 0.2rem;
+    white-space: nowrap;
 }
 
 .metric {
