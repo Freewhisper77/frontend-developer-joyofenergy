@@ -1,0 +1,15 @@
+.last-day {
+    background-color: rgb(111, 153, 234);
+    color: rgb(255, 255, 255);
+    border-radius: 0.4rem;
+}
+
+.last-day:active {
+    background-color: rgb(55, 118, 240);
+    color: rgb(255, 255, 255);
+}
+
+.last-day:hover {
+    background-color: rgb(55, 118, 240);
+    color: rgb(255, 255, 255);
+}
